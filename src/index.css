@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+@media print {
+	body {
+		padding: 40px !important;
+	}
+
+	#pdf-container {
+		display: block;
+	}
+
+	#pdf-no-content {
+		display: none !important;
+	}
+}
+
+#pdf-content {
+	page-break-after: auto !important;
+	page-break-before: auto !important;
+	page-break-inside: avoid !important;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	display: "none";
+}
