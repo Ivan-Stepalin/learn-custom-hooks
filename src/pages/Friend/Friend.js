@@ -23,10 +23,8 @@ export const Friend = () => {
 	const [pageLoading, setPageLoading] = useState(true)
 
 	useEffect(() => {
-		if (pageLoading) {
-			dispatch(getUserInfo({friendId: location.pathname.replace("/friend/:", ""), friendsList: friends.friends}))
-		}
-	}, [pageLoading])
+		dispatch(getUserInfo({friendId: location.pathname.replace("/friend/:", ""), friendsList: friends.friends}))
+	}, [friends])
 
 	useEffect(() => {
 		if (friend.id) {
